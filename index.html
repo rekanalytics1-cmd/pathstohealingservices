@@ -87,7 +87,7 @@ nav.scrolled{
   padding:14px 5%;
 }
 .nav-brand{display:flex;flex-direction:column;gap:1px}
-.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--forest);letter-spacing:.02em;line-height:1.1}
+.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--sun);letter-spacing:.02em;line-height:1.1}
 .nav-brand-sub{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .nav-links{display:flex;gap:6px;align-items:center}
 .nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;color:var(--text-mid);padding:7px 15px;border-radius:var(--radius-pill);transition:all .2s;letter-spacing:.02em}
@@ -127,7 +127,30 @@ nav.scrolled{
 .hero-content{
   position:relative;z-index:3;
   padding:140px 5% 80px;
-  max-width:700px;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.hero-text{max-width:580px;}
+.hero-photo{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-photo img{
+  width:100%;
+  max-width:520px;
+  border-radius:24px;
+  object-fit:cover;
+  object-position:center center;
+  box-shadow:0 24px 80px rgba(0,0,0,.45);
+  border:1px solid rgba(240,192,64,.2);
+  aspect-ratio:4/3;
+}
+@media(max-width:768px){
+  .hero-content{grid-template-columns:1fr;}
+  .hero-photo{display:none;}
 }
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
@@ -554,13 +577,18 @@ footer{
   <div class="hero-overlay"></div>
   <div class="hero-light"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow fade-up d1">Now Accepting New Clients</div>
-    <h1 class="hero-title fade-up d2">Paths to<br><em>Healing</em></h1>
-    <p class="hero-tagline fade-up d3">Psychotherapy for midlife transitions — restoring self-confidence, navigating aging, and reclaiming your identity.</p>
-    <p class="hero-sub fade-up d4">Are you feeling isolated, anxious, or going through a major life transition? Has your life suddenly become smaller? You don't have to walk this path alone.</p>
-    <div class="hero-actions fade-up d5">
-      <a href="#booking" class="btn btn-primary">Book a Free Consultation</a>
-      <a href="#about" class="btn btn-outline">Learn More</a>
+    <div class="hero-text">
+      <div class="hero-eyebrow fade-up d1">Now Accepting New Clients</div>
+      <h1 class="hero-title fade-up d2">Paths to<br><em>Healing</em></h1>
+      <p class="hero-tagline fade-up d3">Psychotherapy for midlife transitions — restoring self-confidence, navigating aging, and reclaiming your identity.</p>
+      <p class="hero-sub fade-up d4">Are you feeling isolated, anxious, or going through a major life transition? Has your life suddenly become smaller? You don't have to walk this path alone.</p>
+      <div class="hero-actions fade-up d5">
+        <a href="#booking" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-photo fade-up d3">
+      <img src="Paths_to_Healing.jpg" alt="A peaceful tree-lined path">
     </div>
   </div>
   <div class="hero-scroll">
