@@ -86,16 +86,19 @@ nav.scrolled{
   box-shadow:0 2px 28px rgba(26,58,42,.08);
   padding:14px 5%;
 }
+nav.scrolled .nav-brand-sub{color:var(--muted)}
+nav.scrolled .nav-links a{color:var(--text-mid)}
+nav.scrolled .nav-hamburger span{background:var(--forest)}
 .nav-brand{display:flex;flex-direction:column;gap:1px}
 .nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--sun);letter-spacing:.02em;line-height:1.1}
-.nav-brand-sub{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.nav-brand-sub{font-size:11px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.08em;text-transform:uppercase}
 .nav-links{display:flex;gap:6px;align-items:center}
-.nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;color:var(--text-mid);padding:7px 15px;border-radius:var(--radius-pill);transition:all .2s;letter-spacing:.02em}
+.nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;color:rgba(255,255,255,.85);padding:7px 15px;border-radius:var(--radius-pill);transition:all .2s;letter-spacing:.02em}
 .nav-links a:hover{color:var(--forest);background:var(--canopy-light)}
 .nav-cta{background:var(--forest)!important;color:var(--sun-pale)!important;padding:9px 22px!important}
 .nav-cta:hover{background:var(--forest-mid)!important;color:white!important}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.nav-hamburger span{width:22px;height:2px;background:var(--forest);border-radius:2px;transition:.3s}
+.nav-hamburger span{width:22px;height:2px;background:white;border-radius:2px;transition:.3s}
 
 /* ── HERO ── */
 .hero{
@@ -131,31 +134,9 @@ nav.scrolled{
 .hero-content{
   position:relative;z-index:3;
   padding:140px 5% 80px;
-  width:100%;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
+  max-width:700px;
 }
-.hero-text{max-width:580px;}
-.hero-photo{
-  position:relative;
-  display:flex;align-items:center;justify-content:center;
-}
-.hero-photo img{
-  width:100%;
-  max-width:520px;
-  border-radius:24px;
-  object-fit:cover;
-  object-position:center center;
-  box-shadow:0 24px 80px rgba(0,0,0,.45);
-  border:1px solid rgba(240,192,64,.2);
-  aspect-ratio:4/3;
-}
-@media(max-width:768px){
-  .hero-content{grid-template-columns:1fr;}
-  .hero-photo{display:none;}
-}
+.hero-text{max-width:640px;}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   background:rgba(240,192,64,.15);
@@ -562,7 +543,7 @@ footer{
 <nav id="navbar">
   <div class="nav-brand">
     <span class="nav-brand-name">Paths to Healing</span>
-    <span class="nav-brand-sub">Lynn Croghan, LIMHP</span>
+    <span class="nav-brand-sub">Lynn Croghan, LIMHP, RN</span>
   </div>
   <div class="nav-links">
     <a href="#about">About</a>
@@ -591,9 +572,7 @@ footer{
         <a href="#about" class="btn btn-outline">Learn More</a>
       </div>
     </div>
-    <div class="hero-photo fade-up d3">
-      <img src="forest_image.png" alt="A peaceful tree-lined path">
-    </div>
+
   </div>
   <div class="hero-scroll">
     <div class="hero-scroll-line"></div>
@@ -606,7 +585,7 @@ footer{
     "You've spent a lifetime showing up for everyone else. This is your space to show up for yourself."
   </div>
   <div class="welcome-strip-text">
-    As a <strong>psychotherapist and registered nurse</strong>, I know how much courage it takes to admit that something isn't right — and even more to ask for help. I bring both clinical expertise and genuine warmth to every session, because you deserve someone who truly understands what this season of life feels like.
+    I know how much courage it takes to admit that something isn't right — and even more to ask for help. I bring both <strong>clinical expertise and genuine warmth</strong> to every session, because you deserve someone who truly understands what this season of life feels like.
   </div>
 </div>
 
@@ -619,10 +598,10 @@ footer{
   <div class="about-grid">
     <div class="about-image-col">
       <div class="about-photo-wrap">
-        <img src="9251.jpg" alt="Lynn Croghan, LIMHP">
+        <img src="9251.jpg" alt="Lynn Croghan, LIMHP, RN">
       </div>
       <div class="about-credential-badge">
-        <div class="cred-title">LIMHP</div>
+        <div class="cred-title">LIMHP, RN</div>
         <div class="cred-sub">Psychotherapist &amp; Registered Nurse<br>Nebraska</div>
       </div>
     </div>
@@ -630,7 +609,7 @@ footer{
     <div class="about-text-col">
       <p>Maybe the kids have grown and gone, and instead of relief you feel a quiet emptiness you weren't expecting. Maybe you've lost someone, or your marriage has changed, or your body doesn't feel familiar anymore. Maybe you're carrying everyone else's weight — and quietly falling apart under it.</p>
       <p>Whatever brought you here, I want you to know: <em>what you're feeling makes sense.</em> This season of life is genuinely hard, and you don't have to keep pushing through it alone.</p>
-      <p>As a psychotherapist and registered nurse, I bring something a little different to the room — <strong>years of both medical and mental health experience</strong>, combined with a deep personal commitment to my own healing journey. I understand how closely our bodies and emotions are connected, and I use that understanding to help you feel better in both.</p>
+      <p>What sets my approach apart is a deep personal commitment to my own healing journey — <strong>I know this terrain from the inside</strong>. I understand how closely our bodies and emotions are connected, and I use that understanding to help you feel better in both.</p>
       <p>My approach is <em>warm, honest, and completely judgment-free</em>. There's no script here — just two people working together to help you rediscover who you are, what you want, and how to move forward with clarity and confidence.</p>
       <p>I currently offer <strong>telehealth sessions</strong> across Nebraska and would love to connect. If you've been thinking about reaching out, let this be the nudge.</p>
       <div class="about-pills">
@@ -830,7 +809,7 @@ footer{
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand"><em>Paths</em> to Healing</div>
-  <div class="footer-sub">Lynn Croghan, LIMHP · Nebraska</div>
+  <div class="footer-sub">Lynn Croghan, LIMHP, RN · Nebraska</div>
   <div class="footer-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -841,7 +820,7 @@ footer{
   </div>
   <hr class="footer-divider">
   <div class="footer-legal">
-    © 2026 Paths to Healing · Lynn Croghan, LIMHP · All rights reserved ·
+    © 2026 Paths to Healing · Lynn Croghan, LIMHP, RN · All rights reserved ·
     <a href="#">Privacy Policy</a> · <a href="#">HIPAA Notice</a><br>
     This website does not provide crisis services. If you are in immediate crisis,
     please call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or go to your nearest emergency room.
