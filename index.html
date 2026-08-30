@@ -547,7 +547,8 @@ footer{
   </div>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#specialties">Specialties</a>
+    <a href="#services">Counseling</a>
+    <a href="#intensives">Intensives</a>
     <a href="#philosophy">Philosophy</a>
     <a href="#booking">Book</a>
     <a href="#contact">Contact</a>
@@ -598,7 +599,7 @@ footer{
   <div class="about-grid">
     <div class="about-image-col">
       <div class="about-photo-wrap">
-        <img src="9251.jpg" alt="Lynn Croghan, LIMHP">
+        <img src="9251.jpeg" alt="Lynn Croghan, LIMHP">
       </div>
       <div class="about-credential-badge">
         <div class="cred-title">LIMHP</div>
@@ -692,12 +693,126 @@ footer{
     <p>Accessible, transparent care. Quality support should be within reach.</p>
   </div>
   <div class="insurance-tags">
-    <span class="ins-tag">✓ Private Pay</span>
-    <span class="ins-tag">⏳ Insurance Coming Soon</span>
+    <span class="ins-tag">✓ Medicare</span>
+    <span class="ins-tag">✓ Medicare Advantage</span>
+    <span class="ins-tag">✓ Medicaid</span>
+    <span class="ins-tag">✓ BCBS</span>
+    <span class="ins-tag">✓ UHC / Optum</span>
+    <span class="ins-tag">✓ Aetna</span>
+    <span class="ins-tag">✓ Midlands Choice</span>
+    <span class="ins-tag">✓ Private Pay — $125/session</span>
     <span class="ins-tag">✓ HSA / FSA Accepted</span>
-    <span class="ins-tag">✓ Contact for fee information</span>
   </div>
 </div>
+
+
+<!-- SERVICES TABS -->
+<section id="services" style="background:var(--warm-white);padding:96px 5%;">
+  <div class="section-label">What I Offer</div>
+  <h2>Two ways to work <em>together</em></h2>
+  <p class="section-sub">Whether you're looking for ongoing support or a deeper dive, there's a path for you.</p>
+
+  <div style="display:flex;gap:12px;margin:40px 0 36px;border-bottom:2px solid var(--border);">
+    <button onclick="showTab('counseling')" id="tab-counseling"
+      style="padding:12px 28px;border:none;background:none;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;">
+      🌿 Counseling
+    </button>
+    <button onclick="showTab('intensives')" id="tab-intensives"
+      style="padding:12px 28px;border:none;background:none;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;">
+      ✨ Intensives &amp; More
+    </button>
+  </div>
+
+  <!-- COUNSELING TAB -->
+  <div id="panel-counseling">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--forest);margin-bottom:16px;">Individual Psychotherapy</h3>
+        <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:16px;">Ongoing one-on-one sessions designed to help you work through the challenges of midlife — at your own pace, in your own way. Sessions are held via telehealth, so you can connect from the comfort of your home.</p>
+        <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:28px;">Together we'll address anxiety, depression, grief, identity shifts, caregiver burnout, and the quiet losses that come with this season of life.</p>
+        <div style="background:var(--canopy-light);border:1px solid var(--border);border-radius:16px;padding:24px 28px;margin-bottom:24px;">
+          <div style="font-size:13px;font-weight:600;color:var(--moss);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;">Session Details</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">💻 Telehealth — available across Nebraska</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">💰 Private Pay: $125 per session</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">🏥 Accepting most major insurances</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">✓ HSA / FSA accepted</span>
+          </div>
+        </div>
+        <a href="#booking" class="btn btn-primary" style="display:inline-flex;">Schedule a Session →</a>
+      </div>
+
+      <!-- Good Fit Box -->
+      <div style="background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);border-radius:24px;padding:40px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(ellipse,rgba(240,192,64,.18) 0%,transparent 70%);"></div>
+        <div style="position:relative;z-index:1;">
+          <div style="font-size:36px;margin-bottom:16px;">🤝</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:white;margin-bottom:12px;line-height:1.2;">Not sure if we're a <em style="color:var(--sun);">good fit?</em></div>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:24px;font-weight:300;">That's completely okay — finding the right therapist is important. I offer a free 15-minute consultation call so we can connect, you can ask questions, and we can both see if working together feels right. No pressure, no commitment.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+            <span style="font-size:13.5px;font-weight:600;color:var(--sage-light);">✓ Free 15-minute call</span>
+            <span style="font-size:13.5px;font-weight:600;color:var(--sage-light);">✓ No commitment required</span>
+            <span style="font-size:13.5px;font-weight:600;color:var(--sage-light);">✓ Ask me anything</span>
+          </div>
+          <a href="https://PLACEHOLDER_SIMPLEPRACTICE_URL" target="_blank" rel="noopener noreferrer"
+            style="display:flex;align-items:center;justify-content:center;padding:15px 28px;background:var(--sun);color:var(--forest);border-radius:100px;font-size:14.5px;font-weight:700;text-decoration:none;font-family:'Jost',sans-serif;letter-spacing:.04em;transition:all .25s;">
+            Book My Free Consultation →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTENSIVES TAB -->
+  <div id="panel-intensives" style="display:none;">
+    <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:36px;max-width:680px;">Beyond weekly therapy, I offer deeper experiences for women who are ready to go further — or who simply want to explore healing in a different way.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📰</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Newsletter &amp; Blog</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">Reflections, insights, and resources for women navigating midlife — delivered straight to your inbox.</p>
+      </div>
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">🏕️</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Retreats</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">Immersive healing experiences in a supportive group setting. A chance to step away, go inward, and reconnect with yourself.</p>
+      </div>
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">🕊️</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Grief Groups</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">A compassionate community for women processing loss — whether it's a person, a relationship, a role, or a version of yourself.</p>
+      </div>
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">🔮</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Intuitive Readings</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">A deeply personal session that blends intuition and insight to help you gain clarity on where you are and where you're headed.</p>
+      </div>
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📓</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Reflective Journaling Course</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">A guided course using journaling as a tool for self-discovery, healing, and clarity. Work through it at your own pace.</p>
+      </div>
+
+      <!-- Journal purchase card -->
+      <div style="background:linear-gradient(135deg,var(--sun-pale) 0%,var(--canopy-light) 100%);border:1px solid rgba(240,192,64,.3);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📖</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Paths to Healing Journal</h3>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.75;font-weight:300;margin-bottom:18px;">A beautiful companion for your healing journey. Thoughtfully designed prompts to help you reflect, grow, and reconnect with yourself.</p>
+        <a href="PLACEHOLDER_JOURNAL_LINK" target="_blank" rel="noopener noreferrer"
+          style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:var(--forest);color:var(--sun-pale);border-radius:100px;font-size:13.5px;font-weight:600;text-decoration:none;font-family:'Jost',sans-serif;letter-spacing:.04em;">
+          Purchase the Journal →
+        </a>
+      </div>
+
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin-top:28px;font-style:italic;">Details and scheduling for intensives coming soon. <a href="#contact" style="color:var(--moss);font-weight:600;">Contact me</a> to be notified.</p>
+  </div>
+</section>
 
 <!-- BOOKING -->
 <section id="booking">
@@ -831,6 +946,17 @@ footer{
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
+
+function showTab(tab) {
+  document.getElementById('panel-counseling').style.display = tab === 'counseling' ? 'block' : 'none';
+  document.getElementById('panel-intensives').style.display = tab === 'intensives' ? 'block' : 'none';
+  document.getElementById('tab-counseling').style.cssText = tab === 'counseling'
+    ? 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;'
+    : 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;';
+  document.getElementById('tab-intensives').style.cssText = tab === 'intensives'
+    ? 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;'
+    : 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;';
+}
 
 function toggleMenu() {
   const links = document.querySelector('.nav-links');
