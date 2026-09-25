@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Paths to Healing | Psychotherapy for Midlife Transitions</title>
+<meta name="description" content="Paths to Healing offers compassionate psychotherapy for people navigating midlife transitions — anxiety, depression, grief, identity, and rediscovering purpose. Telehealth available.">
+<meta name="keywords" content="midlife therapist, psychotherapy for adults, midlife transitions therapy, anxiety depression therapist, empty nest therapist, grief counseling, telehealth therapy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.pathstohealingservices.com">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pathstohealingservices.com">
+<meta property="og:title" content="Paths to Healing | Psychotherapy for Midlife Transitions">
+<meta property="og:description" content="Helping people rediscover themselves when the life they knew no longer fits. Compassionate, judgment-free psychotherapy.">
+<meta property="og:image" content="https://www.pathstohealingservices.com/forest_image.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Paths to Healing",
+  "url": "https://www.pathstohealingservices.com",
+  "image": "https://www.pathstohealingservices.com/forest_image.png",
+  "description": "Psychotherapy for midlife transitions. Helping people navigate anxiety, depression, grief, and identity shifts with compassion and expertise.",
+  "priceRange": "$$",
+  "areaServed": { "@type": "State", "name": "Nebraska" },
+  "availableService": [
+    { "@type": "MedicalTherapy", "name": "Individual Psychotherapy" },
+    { "@type": "MedicalTherapy", "name": "Midlife Transition Counseling" },
+    { "@type": "MedicalTherapy", "name": "Grief & Loss Therapy" }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  /* Forest canopy palette — sunlight through leaves */
+  --forest:#1a3a2a;
+  --forest-mid:#2d5a3d;
+  --moss:#4a7c59;
+  --sage:#7aaa82;
+  --sage-light:#a8c9a0;
+  --canopy:#c8e6c0;
+  --canopy-light:#e8f5e0;
+
+  --sun:#f0c040;
+  --sun-warm:#e8a020;
+  --sun-pale:#fdf5d0;
+  --sun-glow:#fffae8;
+
+  --ivory:#faf8f0;
+  --warm-white:#fdfcf8;
+  --text:#1a2e1e;
+  --text-mid:#3a5242;
+  --muted:#6a8a72;
+  --border:#c8dfc0;
+
+  --radius-lg:18px;
+  --radius-xl:28px;
+  --radius-pill:100px;
+}
+
+html{font-family:'Jost',sans-serif;color:var(--text);background:var(--ivory);font-size:16px;line-height:1.7}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(250,248,240,.78);backdrop-filter:blur(10px);
+  transition:background .4s, box-shadow .4s, padding .3s;
+}
+nav.scrolled{
+  background:rgba(250,248,240,.96);
+  backdrop-filter:blur(12px);
+  box-shadow:0 2px 28px rgba(26,58,42,.08);
+  padding:14px 5%;
+}
+nav.scrolled .nav-brand-sub{color:var(--muted)}
+nav.scrolled .nav-links a{color:var(--text-mid)}
+nav.scrolled .nav-hamburger span{background:var(--forest)}
+.nav-brand{display:flex;flex-direction:column;gap:1px}
+.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--forest);letter-spacing:.02em;line-height:1.1}
+.nav-brand-sub{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;color:var(--text-mid);padding:7px 15px;border-radius:var(--radius-pill);transition:all .2s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--forest);background:var(--canopy-light)}
+.nav-cta{background:var(--forest)!important;color:var(--sun-pale)!important;padding:9px 22px!important}
+.nav-cta:hover{background:var(--forest-mid)!important;color:white!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{width:22px;height:2px;background:var(--forest);border-radius:2px;transition:.3s}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url('forest_image.png') center center/cover no-repeat;
+  z-index:0;
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(
+    105deg,
+    rgba(250,248,240,.94) 0%,
+    rgba(250,248,240,.86) 42%,
+    rgba(232,245,224,.62) 72%,
+    rgba(250,248,240,.50) 100%
+  );
+}
+/* Dappled light effect */
+.hero-light{
+  position:absolute;inset:0;z-index:2;
+  background:
+    radial-gradient(ellipse 360px 460px at 75% 30%, rgba(255,250,232,.68) 0%, transparent 72%),
+    radial-gradient(ellipse 240px 340px at 85% 60%, rgba(240,192,64,.16) 0%, transparent 72%),
+    radial-gradient(ellipse 180px 240px at 65% 15%, rgba(255,255,255,.55) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;z-index:3;
+  padding:140px 5% 80px;
+  max-width:700px;
+}
+.hero-text{max-width:640px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(240,192,64,.15);
+  border:1px solid rgba(240,192,64,.35);
+  backdrop-filter:blur(8px);
+  border-radius:var(--radius-pill);
+  padding:7px 18px;
+  font-size:12px;font-weight:600;
+  color:var(--sun);
+  letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:28px;
+}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--sun);display:inline-block}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(44px,7vw,88px);
+  font-weight:300;
+  line-height:1.05;
+  color:var(--forest);
+  letter-spacing:-.02em;
+  margin-bottom:10px;
+}
+.hero-title em{
+  font-style:italic;
+  color:var(--moss);
+  font-weight:300;
+}
+.hero-tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(18px,2.5vw,26px);
+  font-weight:300;
+  font-style:italic;
+  color:var(--text-mid);
+  margin-bottom:28px;
+  line-height:1.4;
+  max-width:560px;
+}
+.hero-sub{
+  font-size:16px;color:var(--text-mid);
+  font-weight:300;max-width:500px;
+  margin-bottom:40px;line-height:1.8;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:15px 30px;
+  border-radius:var(--radius-pill);
+  font-size:14.5px;font-weight:600;
+  cursor:pointer;text-decoration:none;border:none;
+  font-family:'Jost',sans-serif;
+  letter-spacing:.04em;
+  transition:all .28s;
+}
+.btn-primary{background:var(--sun);color:var(--forest)}
+.btn-primary:hover{background:white;transform:translateY(-2px);box-shadow:0 10px 32px rgba(240,192,64,.3)}
+.btn-outline{background:rgba(255,255,255,.58);color:var(--forest);border:1.5px solid var(--sage)}
+.btn-outline:hover{background:white;border-color:var(--forest)}
+.hero-scroll{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(var(--sage),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.4;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}
+
+/* ── WELCOME STRIP ── */
+.welcome-strip{
+  background:linear-gradient(135deg,var(--canopy-light),var(--warm-white));
+  padding:56px 5%;
+  display:flex;gap:60px;align-items:center;
+  flex-wrap:wrap;
+}
+.welcome-strip-quote{
+  flex:1;min-width:280px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(22px,3vw,34px);
+  font-weight:300;
+  font-style:italic;
+  color:var(--forest);
+  line-height:1.45;
+  border-left:2px solid var(--sun);
+  padding-left:28px;
+}
+.welcome-strip-text{
+  flex:1;min-width:280px;
+  font-size:15.5px;
+  color:var(--text-mid);
+  line-height:1.85;
+  font-weight:300;
+}
+.welcome-strip-text strong{color:var(--forest);font-weight:500}
+
+/* ── SECTIONS ── */
+section{padding:96px 5%}
+.section-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--moss);margin-bottom:14px;
+}
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,4vw,52px);
+  font-weight:400;line-height:1.15;
+  color:var(--forest);
+  margin-bottom:18px;letter-spacing:-.02em;
+}
+h2 em{font-style:italic;color:var(--moss)}
+.section-sub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.8;font-weight:300}
+
+/* ── ABOUT ── */
+#about{background:var(--warm-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;align-items:start;margin-top:56px}
+.about-image-col{position:sticky;top:100px}
+.about-photo-wrap{
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  background:linear-gradient(145deg,var(--canopy) 0%,var(--sage-light) 50%,var(--canopy-light) 100%);
+  aspect-ratio:3/4;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.about-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(0.6);transform-origin:center top;}
+.about-photo-placeholder{text-align:center;padding:40px}
+.about-initials{
+  font-family:'Cormorant Garamond',serif;
+  font-size:100px;font-weight:300;
+  color:var(--forest);opacity:.2;line-height:1;
+}
+.about-photo-placeholder p{font-size:13px;color:var(--muted);margin-top:10px}
+.about-credential-badge{
+  position:absolute;bottom:20px;right:-16px;
+  background:var(--forest);
+  border-radius:var(--radius-lg);padding:16px 20px;
+  box-shadow:0 12px 40px rgba(26,58,42,.25);
+}
+.about-credential-badge .cred-title{font-size:13px;font-weight:600;color:var(--sun);letter-spacing:.04em}
+.about-credential-badge .cred-sub{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+
+.about-text-col{}
+.about-text-col p{color:var(--text-mid);margin-bottom:20px;font-size:16px;line-height:1.85;font-weight:300}
+.about-text-col p strong{color:var(--forest);font-weight:600}
+.about-text-col p em{color:var(--moss);font-style:italic}
+.about-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pill{padding:8px 18px;border-radius:var(--radius-pill);font-size:13px;font-weight:500;letter-spacing:.02em}
+.pill-forest{background:var(--canopy-light);color:var(--forest-mid);border:1px solid var(--canopy)}
+.pill-sun{background:var(--sun-glow);color:var(--sun-warm);border:1px solid rgba(240,192,64,.25)}
+.pill-moss{background:var(--canopy);color:var(--forest);border:1px solid var(--sage-light)}
+
+/* ── SPECIALTIES ── */
+#specialties{background:var(--canopy-light)}
+.spec-header{text-align:center;margin-bottom:56px}
+.spec-header .section-sub{margin:0 auto}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.spec-card{
+  background:var(--warm-white);
+  border:1px solid var(--border);
+  border-radius:var(--radius-xl);
+  padding:34px 28px;
+  transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.spec-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--moss),var(--sun));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .35s ease;
+}
+.spec-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(26,58,42,.1);border-color:var(--sage-light)}
+.spec-card:hover::after{transform:scaleX(1)}
+.spec-icon{font-size:32px;margin-bottom:18px;display:block}
+.spec-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:21px;font-weight:500;
+  margin-bottom:10px;color:var(--forest);line-height:1.2;
+}
+.spec-card p{font-size:14px;color:var(--muted);line-height:1.75;font-weight:300}
+
+/* ── PHILOSOPHY ── */
+#philosophy{
+  background:var(--ivory);
+  position:relative;overflow:hidden;
+}
+.phil-bg{
+  position:absolute;inset:0;
+  background:url('forest_image.png') center center/cover no-repeat;
+  z-index:0;
+  opacity:.10;
+}
+.phil-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(135deg,rgba(250,248,240,.95) 0%,rgba(232,245,224,.91) 100%);
+}
+.phil-light{
+  position:absolute;top:-200px;right:-100px;
+  width:600px;height:600px;
+  background:radial-gradient(ellipse,rgba(240,192,64,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.phil-light2{
+  position:absolute;bottom:-150px;left:-50px;
+  width:400px;height:400px;
+  background:radial-gradient(ellipse,rgba(122,170,130,.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.phil-content{position:relative;z-index:1;max-width:820px;margin:0 auto;text-align:center}
+.phil-content .section-label{color:var(--moss);justify-content:center;display:flex}
+.phil-content h2{color:var(--forest)}
+.phil-content h2 em{color:var(--moss)}
+.phil-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(20px,2.8vw,32px);
+  font-weight:300;font-style:italic;
+  color:var(--forest);
+  line-height:1.55;
+  margin:36px 0;
+  padding:0 20px;
+  border-left:2px solid var(--sun);
+  border-right:2px solid var(--sun);
+  position:relative;
+}
+.phil-body{font-size:16px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:20px}
+.phil-body strong{color:var(--forest);font-weight:500}
+
+/* ── INSURANCE STRIP ── */
+.insurance-strip{
+  background:var(--sun-pale);
+  border-top:1px solid rgba(240,192,64,.3);
+  border-bottom:1px solid rgba(240,192,64,.3);
+  padding:32px 5%;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;
+}
+.insurance-strip h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:500;color:var(--forest);
+}
+.insurance-strip p{font-size:14px;color:var(--muted);margin-top:4px;font-weight:300}
+.insurance-tags{display:flex;gap:10px;flex-wrap:wrap}
+.ins-tag{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius-pill);
+  padding:8px 18px;
+  font-size:13px;font-weight:600;
+  color:var(--forest-mid);
+}
+
+/* ── BOOKING ── */
+#booking{
+  background:var(--warm-white);
+  position:relative;overflow:hidden;
+}
+.booking-bg{
+  position:absolute;inset:0;
+  background:url('forest_image.png') center center/cover no-repeat;
+  opacity:.07;
+  z-index:0;
+}
+.booking-inner{position:relative;z-index:1;}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:56px}
+.booking-steps{display:flex;flex-direction:column;gap:18px;margin-top:24px}
+.step{display:flex;align-items:flex-start;gap:16px}
+.step-num{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--canopy-light);
+  border:1.5px solid var(--sage-light);
+  color:var(--forest);font-weight:700;font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+.step-text strong{display:block;font-size:15px;font-weight:600;color:var(--forest)}
+.step-text span{font-size:13.5px;color:var(--muted);font-weight:300}
+.hipaa-note{
+  display:flex;align-items:center;gap:10px;
+  background:var(--canopy-light);
+  border:1px solid var(--border);
+  border-radius:12px;padding:14px 18px;
+  font-size:13px;color:var(--forest-mid);font-weight:600;
+  margin-top:28px;
+}
+.book-card{
+  background:linear-gradient(135deg,var(--canopy-light) 0%,var(--warm-white) 100%);
+  border-radius:var(--radius-xl);
+  padding:44px 40px;
+  position:relative;overflow:hidden;
+}
+.book-card::before{
+  content:'';position:absolute;
+  top:-80px;right:-80px;
+  width:250px;height:250px;
+  background:radial-gradient(ellipse,rgba(240,192,64,.18) 0%,transparent 70%);
+}
+.book-card-icon{font-size:44px;margin-bottom:20px;display:block}
+.book-card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;font-weight:400;
+  color:var(--forest);margin-bottom:12px;line-height:1.2;
+}
+.book-card-title em{font-style:italic;color:var(--moss)}
+.book-card-sub{font-size:15px;color:var(--text-mid);line-height:1.75;margin-bottom:24px;font-weight:300}
+.book-features{display:flex;flex-direction:column;gap:8px;margin-bottom:30px}
+.book-features span{font-size:13.5px;font-weight:600;color:var(--forest-mid)}
+.book-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:17px 32px;
+  background:var(--sun);color:var(--forest);
+  border-radius:var(--radius-pill);
+  font-size:15px;font-weight:700;
+  text-decoration:none;
+  font-family:'Jost',sans-serif;
+  letter-spacing:.04em;
+  transition:all .25s;
+  margin-bottom:12px;
+}
+.book-btn:hover{background:white;transform:translateY(-2px);box-shadow:0 10px 32px rgba(240,192,64,.3)}
+.book-note{font-size:12px;color:var(--muted);text-align:center;font-weight:300}
+
+/* ── CONTACT ── */
+#contact{background:var(--canopy-light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:56px}
+.contact-card{
+  background:var(--warm-white);
+  border:1px solid var(--border);
+  border-radius:var(--radius-xl);
+  padding:36px;
+}
+.contact-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:500;margin-bottom:24px;color:var(--forest);
+}
+.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.contact-icon{
+  width:42px;height:42px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.ci-forest{background:var(--canopy-light);border:1px solid var(--border)}
+.ci-sun{background:var(--sun-glow);border:1px solid rgba(240,192,64,.2)}
+.contact-item-text strong{display:block;font-size:14px;font-weight:600;color:var(--forest)}
+.contact-item-text span{font-size:13.5px;color:var(--muted);font-weight:300}
+.contact-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:15px;
+  background:var(--forest);color:var(--sun-pale);
+  border-radius:var(--radius-pill);
+  font-size:14.5px;font-weight:600;
+  text-decoration:none;font-family:'Jost',sans-serif;
+  letter-spacing:.04em;
+  transition:all .25s;
+  margin-bottom:14px;
+}
+.contact-btn:hover{background:var(--forest-mid);transform:translateY(-2px)}
+.secure-note{
+  display:flex;align-items:center;gap:8px;
+  background:var(--canopy-light);border:1px solid var(--border);
+  border-radius:10px;padding:10px 14px;
+  font-size:12.5px;color:var(--forest-mid);font-weight:600;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:linear-gradient(135deg,var(--canopy-light),var(--ivory));
+  color:rgba(255,255,255,.6);
+  padding:56px 5% 36px;
+  text-align:center;
+}
+.footer-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;font-weight:300;
+  color:var(--forest);margin-bottom:4px;letter-spacing:.02em;
+}
+.footer-brand em{font-style:italic;color:var(--moss)}
+.footer-sub{font-size:13px;color:var(--muted);margin-bottom:32px;letter-spacing:.04em}
+.footer-links{display:flex;justify-content:center;gap:28px;margin-bottom:32px;flex-wrap:wrap}
+.footer-links a{font-size:13.5px;font-weight:500;color:var(--text-mid);text-decoration:none;letter-spacing:.03em;transition:.2s}
+.footer-links a:hover{color:var(--moss)}
+.footer-divider{border:none;border-top:1px solid var(--border);margin-bottom:24px}
+.footer-legal{font-size:12px;line-height:2;color:var(--muted)}
+.footer-legal a{color:var(--muted);text-decoration:none}
+.footer-legal strong{color:var(--forest)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;animation:fadeUp .8s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .about-grid,.booking-grid,.contact-grid{grid-template-columns:1fr}
+  .about-image-col{position:static}
+  .about-credential-badge{position:static;margin-top:16px;border-radius:var(--radius-lg);display:inline-block}
+  .welcome-strip{flex-direction:column;gap:32px}
+  .insurance-strip{flex-direction:column;text-align:center}
+  .book-card{padding:32px 24px}
+  .hero-content{padding:120px 5% 60px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <span class="nav-brand-name">Paths to Healing</span>
+    <span class="nav-brand-sub">Lynn Croghan, LIMHP</span>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Counseling</a>
+    <a href="#services" onclick="setTimeout(()=>showTab('intensives'),100)">Intensives</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#booking">Book</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking" class="nav-cta btn">Request Appointment</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-light"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow fade-up d1">Now Accepting New Clients</div>
+      <img src="paths-to-healing-logo-transparent.png" alt="Paths to Healing Services LLC" class="fade-up d2" style="width:380px;max-width:90%;margin-bottom:8px;display:block;">
+      <p class="hero-tagline fade-up d3">A compassionate space for anyone ready to rediscover who they are — beyond the roles, the losses, and the noise.</p>
+      <p class="hero-sub fade-up d4">Maybe you used to know exactly who you were. Lately, something feels off — and you can't quite explain it to anyone. You don't have to figure this out alone.</p>
+      <div class="hero-actions fade-up d5">
+        <a href="#booking" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- WELCOME STRIP -->
+<div class="welcome-strip">
+  <div class="welcome-strip-quote">
+    "You've spent a lifetime showing up for everyone else. This is your space to show up for yourself."
+  </div>
+  <div class="welcome-strip-text">
+    I know how much courage it takes to admit that something isn't right — and even more to ask for help. I bring both <strong>clinical expertise and genuine warmth</strong> to every session, because you deserve someone who truly understands what this season of life feels like.
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <h2>Therapy rooted in <em>lived experience</em></h2>
+  <p class="section-sub">A unique blend of psychotherapy and expertise, in service of your whole self.</p>
+
+  <div class="about-grid">
+    <div class="about-image-col">
+      <div class="about-photo-wrap">
+        <img src="9251.jpeg" alt="Lynn Croghan, LIMHP">
+      </div>
+      <div class="about-credential-badge">
+        <div class="cred-title">LIMHP</div>
+        <div class="cred-sub">Psychotherapist<br>Nebraska</div>
+      </div>
+    </div>
+
+    <div class="about-text-col">
+      <p>Maybe the kids have grown and gone, and instead of relief you feel a quiet emptiness you weren't expecting. Maybe you've lost someone, or your marriage has changed, or your body doesn't feel familiar anymore. Maybe you're carrying everyone else's weight — and quietly falling apart under it.</p>
+      <p>Whatever brought you here, I want you to know: <em>what you're feeling makes sense.</em> This season of life is genuinely hard, and you don't have to keep pushing through it alone.</p>
+      <p>What sets my approach apart is a deep personal commitment to my own healing journey — <strong>I know this terrain from the inside</strong>. I understand how closely our bodies and emotions are connected, and I use that understanding to help you feel better in both.</p>
+      <p>My approach is <em>warm, honest, and completely judgment-free</em>. There's no script here — just two people working together to help you rediscover who you are, what you want, and how to move forward with clarity and confidence.</p>
+      <p>I currently offer <strong>telehealth sessions</strong> across Nebraska and would love to connect. If you've been thinking about reaching out, let this be the nudge.</p>
+      <div class="about-pills">
+        <span class="pill pill-forest">Midlife Transitions</span>
+        <span class="pill pill-moss">Anxiety &amp; Depression</span>
+        <span class="pill pill-sun">Grief &amp; Loss</span>
+        <span class="pill pill-forest">Empty Nest</span>
+        <span class="pill pill-moss">Identity &amp; Purpose</span>
+        <span class="pill pill-sun">Caregiver Burnout</span>
+        <span class="pill pill-forest">Self-Confidence</span>
+        <span class="pill pill-moss">Life Transitions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section id="specialties">
+  <div class="spec-header">
+    <div class="section-label">What I Help With</div>
+    <h2>You are not alone in <em>this season</em></h2>
+    <p class="section-sub">The second half of life brings profound change. These are the transitions I am here to help you navigate.</p>
+  </div>
+  <div class="spec-grid">
+    <div class="spec-card">
+      <span class="spec-icon">🌿</span>
+      <h3>Midlife Identity Shifts</h3>
+      <p>When old roles no longer fit, we work together to shed outdated expectations and step into a new, more authentic version of yourself.</p>
+    </div>
+    <div class="spec-card">
+      <span class="spec-icon">🕊️</span>
+      <h3>Grief &amp; Loss</h3>
+      <p>Whether you've lost a loved one, a relationship, a career, or a chapter of life — grief deserves to be honored and held with care.</p>
+    </div>
+    <div class="spec-card">
+      <span class="spec-icon">🌤️</span>
+      <h3>Anxiety &amp; Depression</h3>
+      <p>Together we quiet the noise of anxiety and depression, building practical tools to create more peace and clarity in your daily life.</p>
+    </div>
+    <div class="spec-card">
+      <span class="spec-icon">🏠</span>
+      <h3>Empty Nest &amp; Divorce</h3>
+      <p>Major life restructuring — when children leave, relationships end, or living situations shift — can shake your sense of self. We rebuild from here.</p>
+    </div>
+    <div class="spec-card">
+      <span class="spec-icon">💛</span>
+      <h3>Caregiver Burnout</h3>
+      <p>Caring for others while losing yourself is exhausting. We create space to tend to your own needs without guilt.</p>
+    </div>
+    <div class="spec-card">
+      <span class="spec-icon">✨</span>
+      <h3>Purpose &amp; Meaning</h3>
+      <p>The second half of life is not winding down — it is an awakening. We explore what brings you clarity, insight, and genuine joy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="phil-bg"></div>
+  <div class="phil-overlay"></div>
+  <div class="phil-light"></div>
+  <div class="phil-light2"></div>
+  <div class="phil-content">
+    <div class="section-label">My Philosophy</div>
+    <h2>You deserve to feel like <em>yourself again.</em></h2>
+    <div class="phil-quote">
+      "This chapter of your life is not the end of your story. It might just be the most important one yet."
+    </div>
+    <p class="phil-body">The anxiety, the sadness, the feeling that you've lost yourself somewhere along the way — these are not signs that something is wrong with you. <strong>They are signs that something important is asking for your attention.</strong></p>
+    <p class="phil-body">I believe that the second half of life holds some of the most powerful opportunities for growth — if we have the right support to meet them. My role is not to fix you, because you are not broken. <strong>My role is to walk alongside you</strong> as you reconnect with your own wisdom, strength, and joy.</p>
+    <p class="phil-body">Together, we'll quiet the noise, untangle what's weighing on you, and help you step into this next chapter feeling like <strong>yourself again — maybe even more so.</strong></p>
+  </div>
+</section>
+
+<!-- INSURANCE STRIP -->
+<div class="insurance-strip">
+  <div>
+    <h3>Insurance &amp; Payment</h3>
+    <p>Accessible, transparent care. Quality support should be within reach.</p>
+  </div>
+  <div class="insurance-tags">
+    <span class="ins-tag">✓ Medicare</span>
+    <span class="ins-tag">✓ Medicare Advantage</span>
+    <span class="ins-tag">✓ Medicaid</span>
+    <span class="ins-tag">✓ BCBS</span>
+    <span class="ins-tag">✓ UHC / Optum</span>
+    <span class="ins-tag">✓ Aetna</span>
+    <span class="ins-tag">✓ Midlands Choice</span>
+    <span class="ins-tag">✓ Private Pay — $125/session</span>
+    <span class="ins-tag">✓ HSA / FSA Accepted</span>
+  </div>
+</div>
+
+
+<!-- SERVICES TABS -->
+<section id="services" style="background:var(--warm-white);padding:96px 5%;">
+  <div class="section-label">What I Offer</div>
+  <h2>Two ways to work <em>together</em></h2>
+  <p class="section-sub">Whether you're looking for ongoing support or a deeper dive, there's a path for you.</p>
+
+  <div style="display:flex;gap:12px;margin:40px 0 36px;border-bottom:2px solid var(--border);">
+    <button onclick="showTab('counseling')" id="tab-counseling"
+      style="padding:12px 28px;border:none;background:none;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;">
+      🌿 Counseling
+    </button>
+    <button onclick="showTab('intensives')" id="tab-intensives"
+      style="padding:12px 28px;border:none;background:none;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;">
+      ✨ Intensives &amp; More
+    </button>
+  </div>
+
+  <!-- COUNSELING TAB -->
+  <div id="panel-counseling">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--forest);margin-bottom:16px;">Individual Psychotherapy</h3>
+        <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:16px;">Ongoing one-on-one sessions designed to help you work through the challenges of midlife — at your own pace, in your own way. Sessions are held via telehealth, so you can connect from the comfort of your home.</p>
+        <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:28px;">Together we'll address anxiety, depression, grief, identity shifts, caregiver burnout, and the quiet losses that come with this season of life.</p>
+        <div style="background:var(--canopy-light);border:1px solid var(--border);border-radius:16px;padding:24px 28px;margin-bottom:24px;">
+          <div style="font-size:13px;font-weight:600;color:var(--moss);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;">Session Details</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">💻 Telehealth — available across Nebraska</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">💰 Private Pay: $125 per session</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">🏥 Accepting most major insurances</span>
+            <span style="font-size:14px;color:var(--forest-mid);font-weight:500;">✓ HSA / FSA accepted</span>
+          </div>
+        </div>
+        <a href="#booking" class="btn btn-primary" style="display:inline-flex;">Schedule a Session →</a>
+      </div>
+
+      <!-- Good Fit Box -->
+      <div style="background:linear-gradient(135deg,var(--canopy-light) 0%,var(--warm-white) 100%);border-radius:24px;padding:40px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(ellipse,rgba(240,192,64,.18) 0%,transparent 70%);"></div>
+        <div style="position:relative;z-index:1;">
+          <div style="font-size:36px;margin-bottom:16px;">🤝</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--forest);margin-bottom:12px;line-height:1.2;">Not sure if we're a <em style="color:var(--moss);">good fit?</em></div>
+          <p style="font-size:14.5px;color:var(--text-mid);line-height:1.8;margin-bottom:24px;font-weight:300;">That's completely okay — finding the right therapist is important. I offer a free 15-minute consultation call so we can connect, you can ask questions, and we can both see if working together feels right. No pressure, no commitment.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
+            <span style="font-size:13.5px;font-weight:600;color:var(--forest-mid);">✓ Free 15-minute call</span>
+            <span style="font-size:13.5px;font-weight:600;color:var(--forest-mid);">✓ No commitment required</span>
+            <span style="font-size:13.5px;font-weight:600;color:var(--forest-mid);">✓ Ask me anything</span>
+          </div>
+          <a href="https://lynn-croghan.clientsecure.me" target="_blank" rel="noopener noreferrer"
+            style="display:flex;align-items:center;justify-content:center;padding:15px 28px;background:var(--sun);color:var(--forest);border-radius:100px;font-size:14.5px;font-weight:700;text-decoration:none;font-family:'Jost',sans-serif;letter-spacing:.04em;transition:all .25s;">
+            Book My Free Consultation →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTENSIVES TAB -->
+  <div id="panel-intensives" style="display:none;">
+    <p style="font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;margin-bottom:36px;max-width:680px;">Beyond weekly therapy, I offer deeper experiences for those who are ready to go further — or who simply want to explore healing in a different way.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📰</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Newsletter &amp; Blog</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">Reflections, insights, and resources for anyone navigating midlife — delivered straight to your inbox.</p>
+      </div>
+
+      <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📓</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Reflective Journaling Course</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;">A guided course using journaling as a tool for self-discovery, healing, and clarity. Work through it at your own pace.</p>
+      </div>
+
+      <!-- Journal purchase card -->
+      <div style="background:linear-gradient(135deg,var(--sun-pale) 0%,var(--canopy-light) 100%);border:1px solid rgba(240,192,64,.3);border-radius:20px;padding:30px 26px;">
+        <span style="font-size:28px;display:block;margin-bottom:14px;">📖</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--forest);margin-bottom:8px;">Paths to Healing Journal</h3>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.75;font-weight:300;margin-bottom:18px;">A beautiful companion for your healing journey. Thoughtfully designed prompts to help you reflect, grow, and reconnect with yourself.</p>
+        <a href="PLACEHOLDER_JOURNAL_LINK" target="_blank" rel="noopener noreferrer"
+          style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:var(--forest);color:var(--sun-pale);border-radius:100px;font-size:13.5px;font-weight:600;text-decoration:none;font-family:'Jost',sans-serif;letter-spacing:.04em;">
+          Purchase the Journal →
+        </a>
+      </div>
+
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin-top:28px;font-style:italic;">Details and scheduling for intensives coming soon. <a href="#contact" style="color:var(--moss);font-weight:600;">Contact me</a> to be notified.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-bg"></div>
+  <div class="booking-inner">
+  <div class="section-label">Get Started</div>
+  <h2>Begin your <em>path to healing</em></h2>
+  <p class="section-sub">Taking that first step is often the hardest part. Here's exactly what to expect — no surprises, no pressure.</p>
+
+  <div class="booking-grid">
+    <div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--forest);margin-bottom:14px">What to expect</h3>
+      <p style="font-size:15px;color:var(--muted);line-height:1.8;font-weight:300">You deserve a therapist who feels like the right fit. Here's exactly what happens when you reach out:</p>
+      <div class="booking-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Request your appointment</strong><span>Use the secure booking portal to request a time that works for you.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Confirmation within 24 hours</strong><span>You'll receive a response and any intake paperwork.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Free consultation call</strong><span>A no-pressure conversation to make sure we're a great fit.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Begin your journey</strong><span>Your first full session is scheduled and your path begins.</span></div>
+        </div>
+      </div>
+      <div class="hipaa-note">
+        <span style="font-size:20px">🔒</span>
+        HIPAA-compliant · Encrypted &amp; secure · Powered by SimplePractice
+      </div>
+    </div>
+
+    <div class="book-card">
+      <span class="book-card-icon">🌿</span>
+      <div class="book-card-title">Ready to take the <em>first step?</em></div>
+      <div class="book-card-sub">You don't have to have it all figured out before you reach out. Just start here — a simple, secure request takes less than 2 minutes.</div>
+      <div class="book-features">
+        <span>✓ Free 15-minute consultation</span>
+        <span>✓ telehealth sessions</span>
+        <span>✓ Secure &amp; HIPAA-compliant</span>
+        <span>✓ New clients welcome</span>
+      </div>
+      <a href="https://lynn-croghan.clientsecure.me" target="_blank" rel="noopener noreferrer" class="book-btn">
+        Book My Appointment →
+      </a>
+      <div class="book-note">🔒 Powered by SimplePractice</div>
+    </div>
+  </div>
+  </div><!-- /booking-inner -->
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2>Let's <em>connect</em></h2>
+  <p class="section-sub">Not sure if you're ready? That's okay. Send a message and we'll take it one step at a time.</p>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Contact Information</h3>
+      <div class="contact-item">
+        <div class="contact-icon ci-forest">📍</div>
+        <div class="contact-item-text">
+          <strong>Location</strong>
+          <span>Nebraska<br>telehealth available</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon ci-sun">✉</div>
+        <div class="contact-item-text">
+          <strong>Email</strong>
+          <span>pathstohealingservices@gmail.com</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon ci-forest">📞</div>
+        <div class="contact-item-text">
+          <strong>Phone</strong>
+          <span>(402) 957-2036</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon ci-sun">🕐</div>
+        <div class="contact-item-text">
+          <strong>Office Hours</strong>
+          <span>Telehealth sessions available<br>Contact for current availability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Send a secure message</h3>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;font-weight:300;line-height:1.75">Wondering if this feels like the right fit? Have questions about what to expect? Send me a message — there's no commitment, and I always respond personally.</p>
+      <a href="https://lynn-croghan.clientsecure.me/contact-widget" target="_blank" rel="noopener noreferrer" class="contact-btn">
+        ✉ Send a Secure Message →
+      </a>
+      <div class="secure-note">
+        <span>🔒</span> HIPAA-compliant · Powered by SimplePractice
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand"><em>Paths</em> to Healing</div>
+  <div class="footer-sub">Lynn Croghan, LIMHP · Nebraska</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#specialties">Specialties</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#booking">Book</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-legal">
+    © 2026 Paths to Healing · Lynn Croghan, LIMHP · All rights reserved ·
+    <a href="#">Privacy Policy</a> · <a href="#">HIPAA Notice</a><br>
+    This website does not provide crisis services. If you are in immediate crisis,
+    please call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or go to your nearest emergency room.
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function showTab(tab) {
+  document.getElementById('panel-counseling').style.display = tab === 'counseling' ? 'block' : 'none';
+  document.getElementById('panel-intensives').style.display = tab === 'intensives' ? 'block' : 'none';
+  document.getElementById('tab-counseling').style.cssText = tab === 'counseling'
+    ? 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;'
+    : 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;';
+  document.getElementById('tab-intensives').style.cssText = tab === 'intensives'
+    ? 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--forest);border-bottom:3px solid var(--forest);margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;'
+    : 'padding:12px 28px;border:none;background:none;font-family:Jost,sans-serif;font-size:15px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;letter-spacing:.02em;';
+}
+
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  const open = links.style.display === 'flex';
+  links.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:72px;right:20px;background:white;padding:16px;border-radius:16px;box-shadow:0 8px 32px rgba(26,58,42,.12);z-index:200;gap:4px;min-width:200px;border:1px solid var(--border)';
+}
+</script>
+</body>
+</html>
